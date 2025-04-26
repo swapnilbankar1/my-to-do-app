@@ -1,0 +1,21 @@
+<div>
+  <h1 style="text-align: center;">To Do App</h1>
+  <div class="main-container">
+    <mat-form-field class="example-full-width">
+      <input matInput [(ngModel)]="currentToDo">
+    </mat-form-field>
+    <button mat-stroked-button (click)="addToDo()">Add</button>
+  </div>
+
+  <div class="to-do-list">
+    <mat-list role="list">
+      @for (todo of todoList; track todo.id) {
+      <mat-list-item role="listitem">
+        <div matListItemTitle>{{todo.name}}</div>
+        <mat-icon matListItemIcon (click)="remove(todo.id)">delete</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      }
+    </mat-list>
+  </div>
+</div>
