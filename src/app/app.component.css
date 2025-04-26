@@ -1,0 +1,18 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.to-do-list {
+    width: 400px;
+    margin: auto;
+}
+
+.white-background {
+    width: 400px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
