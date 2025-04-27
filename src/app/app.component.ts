@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,12 +14,12 @@ interface ToDo {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatInputModule, MatListModule, MatButtonModule, FormsModule, MatIconModule, CommonModule],
+  imports: [MatInputModule, MatListModule, MatButtonModule, FormsModule, MatIconModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  currentToDo: string = ""
+  currentToDo = "";
   todoList: ToDo[] = [];
 
   addToDo() {

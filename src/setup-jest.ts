@@ -1,8 +1,6 @@
 // setup-jest.ts
 import 'jest-preset-angular/setup-jest';
 
-
-
 if (!globalThis.crypto) {
     (globalThis as any).crypto = {};
 }

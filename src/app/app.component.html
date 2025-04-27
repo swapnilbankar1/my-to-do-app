@@ -10,8 +10,9 @@
     <mat-list role="list">
       @for (todo of todoList; track todo.id) {
       <mat-list-item role="listitem">
-        <div matListItemTitle [ngClass]="{'completed': todo.isComplete}" (click)="markAsCompleted(todo.id)">{{todo.name}}</div>
-        <mat-icon matListItemIcon (click)="remove(todo.id)">delete</mat-icon>
+        <div matListItemTitle [ngClass]="{'completed': todo.isComplete}" role="button" (click)="markAsCompleted(todo.id)">
+          {{todo.name}}</div>
+        <mat-icon matListItemIcon role="button" (click)="remove(todo.id)">delete</mat-icon>
       </mat-list-item>
       <mat-divider></mat-divider>
       }
