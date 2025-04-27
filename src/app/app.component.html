@@ -2,7 +2,7 @@
   <h1 style="text-align: center;">To Do App</h1>
   <div class="main-container">
     <mat-form-field class="white-background">
-      <input matInput [(ngModel)]="currentToDo" (keydown.enter)="addToDo()">
+      <input matInput name="task" [(ngModel)]="currentToDo" (keydown.enter)="addToDo()">
     </mat-form-field>
   </div>
 
@@ -10,9 +10,9 @@
     <mat-list role="list">
       @for (todo of todoList; track todo.id) {
       <mat-list-item role="listitem">
-        <div matListItemTitle [ngClass]="{'completed': todo.isComplete}" role="button" (click)="markAsCompleted(todo.id)">
+        <div matListItemTitle [ngClass]="{'completed': todo.isComplete}" id="btn-complete" role="button" (click)="markAsCompleted(todo.id)">
           {{todo.name}}</div>
-        <mat-icon matListItemIcon role="button" (click)="remove(todo.id)">delete</mat-icon>
+        <mat-icon matListItemIcon  id="btn-icon" role="button" (click)="remove(todo.id)">delete</mat-icon>
       </mat-list-item>
       <mat-divider></mat-divider>
       }
