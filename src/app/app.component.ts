@@ -21,6 +21,7 @@ interface ToDo {
 export class AppComponent {
   currentToDo = "";
   todoList: ToDo[] = [];
+  test = "";
 
   addToDo() {
     if (!this.currentToDo) {
