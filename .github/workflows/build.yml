@@ -19,12 +19,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # (or your project Node version)
+          node-version: '20.18.0'
 
       - name: Install Dependencies
         run: npm install
 
-       - name: Run Linter
+      - name: Run Linter
         run: npm run lint
 
       - name: Run Unit Tests
